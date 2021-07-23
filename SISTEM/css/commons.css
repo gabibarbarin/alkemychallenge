@@ -1,0 +1,41 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif, Verdana, Geneva, Tahoma;
+}
+
+.main-container{
+    width: 100%;
+    max-width: 1440px;
+    background-color: rgb(69, 135, 232);
+    height: auto;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.glassmorphism-efecct{
+    background: rgba( 255, 254, 254, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px ); 
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.primary-button{
+    border: none;
+    border-radius: 20px;
+    padding: .8rem;
+    background-color: rgb(189, 58, 63);
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    width: 90%;
+}
