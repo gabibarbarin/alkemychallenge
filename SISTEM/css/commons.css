@@ -39,3 +39,30 @@ body, html{
     font-weight: bold;
     width: 90%;
 }
+
+.primary-button:hover{
+    background-color: rgb(160, 50, 54);
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+@media only screen and (min-width: 425px) {
+    body,html{
+        font-size: 18px;
+    }
+    .primary-button{
+        width: auto; 
+        font-size: .7rem;   
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body,html{
+        font-size: 24px;
+    }
+    .primary-button{
+        border-radius: 30px;
+    }
+}

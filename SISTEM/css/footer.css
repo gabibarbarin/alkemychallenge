@@ -1,5 +1,7 @@
 footer{
     background-color: black;
     color: white;
+    text-align: center;
+    font-size: .8rem;
     padding: 1rem .5rem;
 }

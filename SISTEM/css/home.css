@@ -27,8 +27,37 @@ main{
     border-bottom: solid 1px rgba(230, 230, 230, 0.644);
 }
 
+.inner-container-operation{
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .concept{
-    margin: auto;
+    margin:  0 1rem 0 1rem;
+    max-width: 90%;
+    max-height: 1rem;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    font-size: .8rem;
+    font-weight: 500;
+    color: rgb(146, 146, 146);
+}
+
+.month-operation{
+    font-size: .9rem;
+    color: rgb(182, 182, 182);
+}
+
+.day-operation{
+    color: rgb(182, 182, 182);
+    font-weight: 600;
+}
+
+.amount-operation{
+    color: rgb(69, 135, 232);
+    font-weight: 600;
 }
 
 .keypad{
@@ -37,4 +66,17 @@ main{
 
 .keypad img{
     height: 3rem;
+}
+
+@media only screen and (min-width: 425px) {
+    main{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .inner-container-operation{
+        max-width: 95%;
+    }
 }
