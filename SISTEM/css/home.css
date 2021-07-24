@@ -15,7 +15,7 @@
     font-size: 1rem;
 }
 
-main{
+#main{
     background-color: white;
     padding-bottom: 1rem;
 }
@@ -56,7 +56,6 @@ main{
 }
 
 .amount-operation{
-    color: rgb(69, 135, 232);
     font-weight: 600;
 }
 
@@ -69,7 +68,7 @@ main{
 }
 
 @media only screen and (min-width: 425px) {
-    main{
+    #main{
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }

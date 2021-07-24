@@ -48,6 +48,14 @@ body, html{
     text-align: center;
 }
 
+.egress-color{
+    color: rgb(216, 66, 71);
+}
+
+.entry-color{
+    color: rgb(69, 135, 232);
+}
+
 @media only screen and (min-width: 425px) {
     body,html{
         font-size: 18px;

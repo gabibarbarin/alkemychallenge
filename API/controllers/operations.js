@@ -1,12 +1,12 @@
 const connection = require('../db')
 
 module.exports.operations = (req, res)=>{
-    connection.query('SELECT * FROM operations WHERE id_user = ?', [ req.body.id_user ], (err,results)=>{
+    connection.query('SELECT * FROM operations WHERE id_user = ?', [ req.params.id_user ], (err,results)=>{
         if(err) 
             return res.status(400).json({message: 'Error en la consulta.'})
         
         if(results.length == 0){
-            res.sendStatus(204)
+            res.status(204).json({message: 'Usuario no encontrado.'})
         }else{
             res.status(200).json({data: results})
         }
