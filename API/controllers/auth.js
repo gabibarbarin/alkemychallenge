@@ -11,11 +11,12 @@ module.exports.login = (req,res) =>{
             if(results.length == 0)
                 res.status(401).json({message: 'Usuario y/o contraseña incorrectos.'})
             else{
-                if(req.body.password = results[0].password){
-                    const payload = { user_id: results[0].id }
+                if(req.body.password == results[0].password){
+                    const payload = { user_id: results[0].id_user }
                     const token = jwt.sign(payload, process.env.JWT_KEY, {expiresIn: '1h'})
-                    res.json({token})
-                }
+                    res.json({token, payload})
+                }else
+                    res.status(401).json({message: 'Usuario y/o contraseña incorrectos.'})
             }
         })
     }else{

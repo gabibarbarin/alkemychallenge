@@ -1,5 +1,6 @@
 import { getOperations } from "./modules/callsApi.js";
-import { listeners } from "./modules/listeners.js";
+import { listenerViewMore, listenerLogout } from "./modules/listeners.js";
 
 getOperations()
-listeners()
+listenerViewMore()
+listenerLogout()

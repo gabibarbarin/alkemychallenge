@@ -1,0 +1,39 @@
+.body-blue{
+    background: linear-gradient(rgba(69,135,232,1) 25%, rgba(255,255,255,1) 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-container{
+    width: 90%;
+    max-width: 1440px;
+    height: auto;
+    margin: 35% auto auto auto;
+    padding: 1rem .3rem;
+}
+
+.form-login{
+    padding: 0 .5rem;
+    align-items: center;
+}
+
+.form-login label{
+    display: block;
+    width: 100%;
+    padding-left: .8rem;
+    font-weight: 600;
+    color: rgb(146, 146, 146);
+}
+
+.form-login input{
+    border: none;
+    outline-style: none;
+    width: 90%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    color: rgb(146, 146, 146);
+}
+
+.form-login button{
+    margin-top: .5rem;
+}

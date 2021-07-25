@@ -9,7 +9,6 @@ module.exports.isJWTLogin = (req,res,next) =>{
             if (err){
                 res.status(401).json({ message: 'Token incorrecto' })
             }else{
-                res.status(200)
                 next()
             }
         })

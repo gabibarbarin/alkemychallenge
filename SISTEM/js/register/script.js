@@ -1,4 +1,5 @@
 const formRegister = document.querySelector('.form-register')
+const loginButton = document.querySelector('#login-button')
 
 formRegister.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -20,3 +21,5 @@ formRegister.addEventListener('submit', (e) => {
         })
         .catch(err => console.log(err))
 })
+
+loginButton.addEventListener('click', () => window.location.href = "../../views/login.html")

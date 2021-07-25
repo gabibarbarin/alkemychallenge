@@ -1,12 +1,14 @@
 import { renderBalance, renderOperation } from "./functions.js"
+const token = localStorage.getItem('token')
+const userId = localStorage.getItem('idUser')
 
 export const getOperations = () =>{
 return axios({
     method: "GET",
-    url: 'http://localhost:8000/operations/2',
+    url: `http://localhost:8000/operations/${userId}`,
     headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcyMzE0MjYsImV4cCI6MTYyNzIzNTAyNn0.q_Ny6BSldYl8rO3NHTRugTZV0TTu2U_hBNwRcpKIlbQ",
+        Authorization: `Bearer ${token}`,
     }})
     .then(response => {
         renderBalance(response.data.data)
@@ -17,16 +19,20 @@ return axios({
             i++
         }
     })
-    .catch(err => console.log(err))
+    .catch(err => {
+        if(err.response.status === 401){
+            window.location.href = "../../views/login.html"
+        }
+    })
 }
 
 export const getAllOperations = () =>{
     return axios({
         method: "GET",
-        url: 'http://localhost:8000/operations/2',
+        url: `http://localhost:8000/operations/${userId}`,
         headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjcyMzE0MjYsImV4cCI6MTYyNzIzNTAyNn0.q_Ny6BSldYl8rO3NHTRugTZV0TTu2U_hBNwRcpKIlbQ",
+            Authorization: `Bearer ${token}`,
         }})
         .then(response => {
             let i = 10 
@@ -36,5 +42,32 @@ export const getAllOperations = () =>{
                 i++
             }
         })
-        .catch(err => console.log(err))
-    }
+        .catch(err => {
+            if(err.response.status === 401){
+                window.location.href = "../../views/login.html"
+            }
+        })
+}
+
+export const logout = () =>{
+    return axios({
+        method: "GET",
+        url: `http://localhost:8000/operations/${userId}`,
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        }})
+        .then(response => {
+            let i = 10 
+            
+            while(response.data.data[i]){
+                renderOperation(response.data.data[i])
+                i++
+            }
+        })
+        .catch(err => {
+            if(err.response.status === 401){
+                window.location.href = "../../views/login.html"
+            }
+        })
+}

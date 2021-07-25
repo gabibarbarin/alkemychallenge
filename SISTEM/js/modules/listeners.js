@@ -1,6 +1,6 @@
 import { getAllOperations } from "./callsApi.js";
 
-export const listeners = () =>{
+export const listenerViewMore = () =>{
 const viewMore = document.querySelector('#view-more')
 
     viewMore.addEventListener('click', () => {
@@ -8,4 +8,15 @@ const viewMore = document.querySelector('#view-more')
         viewMore.style.display = 'none';
     })
 
+}
+
+export const listenerLogout = () =>{
+    const logout = document.querySelector('.logout-img')
+
+    logout.addEventListener('click', () => {
+        localStorage.removeItem('token')
+        localStorage.removeItem('idUser')
+
+        window.location.href = "../../views/login.html"
+    })
 }
