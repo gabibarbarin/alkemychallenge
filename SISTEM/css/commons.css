@@ -28,10 +28,19 @@ body, html{
     -webkit-backdrop-filter: blur( 20.0px ); 
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+.glassmorphism-efecct2{
+    background: rgba( 255, 254, 254, 0.40 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
 .primary-button{
     border: none;
     border-radius: 20px;
+    outline-style: none;
     padding: .8rem;
     background-color: rgb(189, 58, 63);
     text-transform: uppercase;

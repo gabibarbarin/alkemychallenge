@@ -1,0 +1,39 @@
+.body-blue{
+    background: linear-gradient(rgba(69,135,232,1) 25%, rgba(255,255,255,1) 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.register-container{
+    width: 90%;
+    max-width: 1440px;
+    height: auto;
+    margin: 25% auto auto auto;
+    padding: 1rem .3rem;
+}
+
+.form-register{
+    padding: 0 .5rem;
+    align-items: center;
+}
+
+.form-register label{
+    display: block;
+    width: 100%;
+    padding-left: .8rem;
+    font-weight: 600;
+    color: rgb(146, 146, 146);
+}
+
+.form-register input{
+    border: none;
+    outline-style: none;
+    width: 90%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    color: rgb(146, 146, 146);
+}
+
+.form-register button{
+    margin-top: .5rem;
+}

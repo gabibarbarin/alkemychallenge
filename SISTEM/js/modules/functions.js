@@ -31,36 +31,33 @@ export const renderBalance = (data) =>{
 }
 
 export const renderOperation = (data) =>{
-    let i = 0;
+    
     const main = document.querySelector('.operations-container')
     let amountHTML = ''
 
-    while (data[i] && i<10) {
-    let day = new Date(data[i].date)
+    let day = new Date(data.date)
     main.innerHTML += 
         `<div class="operation flex-row">
             <div class="flex-row inner-container-operation">
                 <div class="flex-column text-align-center">
-                    <span class="month-operation">${transformMonth(data[i].date)}</span>
+                    <span class="month-operation">${transformMonth(data.date)}</span>
                     <span class="day-operation">${day.getDate()}</span>
                 </div>
                 
                 <span class="concept">
-                    ${data[i].concept}
+                    ${data.concept}
                 </span>
             </div>
 
-            <span class="amount-operation operationId${data[i].id_operation}">
-                $${data[i].amount}
+            <span class="amount-operation operationId${data.id_operation}">
+                $${data.amount}
             </span>
         </div>`
 
-        amountHTML = document.querySelector(`.operationId${data[i].id_operation}`)
-        if(data[i].type_operation == 'egreso')
+        amountHTML = document.querySelector(`.operationId${data.id_operation}`)
+        if(data.type_operation == 'egreso')
             amountHTML.classList.add('entry-color')
         else
             amountHTML.classList.add('egress-color')
 
-        i++
-    }
 }

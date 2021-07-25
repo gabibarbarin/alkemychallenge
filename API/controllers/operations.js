@@ -1,7 +1,8 @@
 const connection = require('../db')
 
 module.exports.operations = (req, res)=>{
-    connection.query('SELECT * FROM operations WHERE id_user = ?', [ req.params.id_user ], (err,results)=>{
+    connection.query('SELECT * FROM operations WHERE id_user = ? ORDER BY id_operation DESC', 
+    [ req.params.id_user ], (err,results)=>{
         if(err) 
             return res.status(400).json({message: 'Error en la consulta.'})
         
