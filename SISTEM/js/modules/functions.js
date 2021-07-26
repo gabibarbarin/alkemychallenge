@@ -16,7 +16,7 @@ export const calculateBalance = (data) =>{
         i++
     }
 
-    return balance
+    return balance.toFixed(2)
 }
 
 export const renderBalance = (data) =>{
@@ -55,7 +55,7 @@ export const renderOperation = (data) =>{
         </div>`
 
         amountHTML = document.querySelector(`.operationId${data.id_operation}`)
-        if(data.type_operation == 'egreso')
+        if(data.type_operation == 'ingreso')
             amountHTML.classList.add('entry-color')
         else
             amountHTML.classList.add('egress-color')

@@ -72,6 +72,22 @@ body, html{
     width: 2rem;
 }
 
+.body-blue{
+    background: linear-gradient(rgba(69,135,232,1) 25%, rgba(255,255,255,1) 100%);
+}
+
+.hundredVH{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.footer-empty-page{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 @media only screen and (min-width: 425px) {
     body,html{
         font-size: 18px;

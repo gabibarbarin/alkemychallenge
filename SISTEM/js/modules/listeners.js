@@ -20,3 +20,9 @@ export const listenerLogout = () =>{
         window.location.href = "../../views/login.html"
     })
 }
+
+export const listenerNewOperation = () =>{
+    const newOperation = document.querySelector('.new-operation')
+
+    newOperation.addEventListener('click', () => window.location.href = "../../views/newOperation.html")
+}

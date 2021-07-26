@@ -1,0 +1,45 @@
+.header-container{
+    width: 100%;
+    max-width: 1440px;
+    background-color: rgb(69, 135, 232);
+    height: auto;
+}
+.inner-header-new-operation{
+    height: 1.5rem;
+    padding: 1rem 0;
+}
+
+#title-new-operation{
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+.form-new-operation{
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem .5rem;
+    background-color: white;
+    height: 75%;
+}
+
+.titles-input{
+    font-weight: 600;
+    color: rgb(146, 146, 146);
+}
+
+.form-new-operation input[type="text"], .form-new-operation input[type="date"], 
+.form-new-operation input[type="number"]{
+    width: 50%;
+    border: none;
+    border-bottom: solid 1px rgb(69, 135, 232);
+    outline-style: none;
+}
+
+.border-gray{
+    border-bottom: solid 1px rgba(230, 230, 230, 0.644);
+    padding-bottom: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
