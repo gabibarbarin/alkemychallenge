@@ -69,5 +69,5 @@ export const logout = () =>{
             if(err.response.status === 401){
                 window.location.href = "../../views/login.html"
             }
-        })
+    })
 }

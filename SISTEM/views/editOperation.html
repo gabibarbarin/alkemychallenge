@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     
-    <title>Nueva operacion</title>
+    <title>Editar operacion</title>
     
     <!-- Link Hoja de estilos -->
     <link rel="stylesheet" href="/css/style.css">
@@ -19,7 +19,7 @@
 <div class="flex-column header-container">
     <div class="glassmorphism-efecct inner-header-operation">
         <img class='logout-img' src="../img/logout.svg">
-        <span id="title-operation">NUEVA OPERACION</span>
+        <span id="title-operation">EDITAR OPERACION</span>
     </div>    
 </div>
 
@@ -27,9 +27,9 @@
 
     <span class="titles-input">Tipo de operacion</span>
     <div class="border-gray flex-row">
-        <input type="radio" id="entry-input"  name="type_operation" value="ingreso" checked>
+        <input type="radio" id="entry-input" name="type_operation" value="ingreso" checked disabled>
             <label for="entry" class="entry-color">Ingreso</label>    
-        <input type="radio" id="egress-input"  name="type_operation" value="egreso">
+        <input type="radio" id="egress-input" name="type_operation" value="egreso" disabled>
             <label for="egress" class="egress-color">Egreso</label> 
         
     </div>
@@ -55,7 +55,7 @@
         <input type="date" id="date" name="date" required>
     </div>  
 
-    <button type="submit" class="primary-button">Agregar</button>
+    <button type="submit" class="primary-button">Editar</button>
     <button class="primary-button cancel-button">Cancelar</button>
 </form>
     
@@ -64,6 +64,6 @@
 </footer>
     
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="../js/newOperation/script.js"></script> 
+<script src="../js/editOperation/script.js"></script> 
 </body>
 </html>

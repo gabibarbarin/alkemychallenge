@@ -16,7 +16,7 @@ module.exports.operations = (req, res)=>{
 
 module.exports.show = (req, res)=>{
     connection.query('SELECT * FROM operations WHERE id_operation = ? AND id_user = ?', 
-    [ req.body.id_operation, req.body.id_user ], (err,results)=>{
+    [ req.params.id_operation, req.params.id_user ], (err,results)=>{
         if(err) 
             return res.status(400).json({message: 'Error en la consulta.'})
         

@@ -1,11 +1,10 @@
 cancelButton = document.querySelector('.cancel-button')
-formNewOperation = document.querySelector('.form-new-operation')
+formNewOperation = document.querySelector('.form-operation')
 const token = localStorage.getItem('token')
 const userId = localStorage.getItem('idUser')
 
 formNewOperation.addEventListener('submit', (e) => {
     e.preventDefault()
-
     let typeOperation = ''
     if(document.querySelector('#entry-input').checked)
         typeOperation = document.querySelector('#entry-input').value
