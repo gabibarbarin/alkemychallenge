@@ -21,11 +21,4 @@ formRegister.addEventListener('submit', (e) => {
         .catch(err => console.log(err))
 })
 
-document.querySelector('.logout-img').onclick = () => {
-    localStorage.removeItem('token')
-    localStorage.removeItem('idUser')
-
-    window.location.href = "../../views/login.html"
-}
-
 loginButton.onclick = () => window.location.href = "../../views/login.html"
