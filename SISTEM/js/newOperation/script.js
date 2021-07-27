@@ -34,7 +34,11 @@ formNewOperation.addEventListener('submit', (e) => {
         })
 })
 
-cancelButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    window.location.href = "../../index.html"
-})
+document.querySelector('.logout-img').onclick = () => {
+    localStorage.removeItem('token')
+    localStorage.removeItem('idUser')
+
+    window.location.href = "../../views/login.html"
+}
+
+cancelButton.onclick = () => window.location.href = "../../index.html"

@@ -9,27 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     
-    <title>Editar operacion</title>
+    <title>Alkemy</title>
     
     <!-- Link Hoja de estilos -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="hundredVH">
+<body class="hundredVH-auto">
 
-<div class="flex-column header-container">
-    <div class="glassmorphism-efecct inner-header-operation">
+<div class="header-container">
+    <div class="glassmorphism-efecct inner-header">
+        <img class='edit-img' src="../img/edit.svg">
         <img class='logout-img' src="../img/logout.svg">
-        <span id="title-operation">EDITAR OPERACION</span>
+        <span id="amount-show-operation"><!--Se renderiza desde JS--></span>
     </div>    
 </div>
 
-<form class="flex-column form-operation">
+<div class="show-operation-container flex-column">
+    <span id="type-operation"><!--Se renderiza desde JS--></span>
+    <span id="concept"><!--Se renderiza desde JS--></span>
+    <span id="date"><!--Se renderiza desde JS--></span>
+</div>
+<!--<form class="flex-column form-operation">
 
     <span class="titles-input">Tipo de operacion</span>
     <div class="border-gray flex-row">
-        <input type="radio" id="entry-input" name="type_operation" value="ingreso" checked disabled>
+        <input type="radio" id="entry-input"  name="type_operation" value="ingreso" checked>
             <label for="entry" class="entry-color">Ingreso</label>    
-        <input type="radio" id="egress-input" name="type_operation" value="egreso" disabled>
+        <input type="radio" id="egress-input"  name="type_operation" value="egreso">
             <label for="egress" class="egress-color">Egreso</label> 
         
     </div>
@@ -55,15 +61,15 @@
         <input type="date" id="date" name="date" required>
     </div>  
 
-    <button type="submit" class="primary-button">Editar</button>
-    <button type="button" class="primary-button cancel-button">Cancelar</button>
-</form>
+    <button type="submit" class="primary-button">Agregar</button>
+    <button class="primary-button cancel-button">Cancelar</button>
+</form>-->
     
 <footer class="footer-empty-page">
     Copyright © Gabriel Barbarin Gorostegui 2021.
 </footer>
     
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="../js/editOperation/script.js"></script> 
+<script src="../js/showOperation/script.js"></script> 
 </body>
 </html>

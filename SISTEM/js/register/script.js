@@ -16,10 +16,16 @@ formRegister.addEventListener('submit', (e) => {
             "Content-Type": "application/json",
         }})
         .then(response => {
-            console.log(response)
             window.location.href = "../../views/login.html"
         })
         .catch(err => console.log(err))
 })
 
-loginButton.addEventListener('click', () => window.location.href = "../../views/login.html")
+document.querySelector('.logout-img').onclick = () => {
+    localStorage.removeItem('token')
+    localStorage.removeItem('idUser')
+
+    window.location.href = "../../views/login.html"
+}
+
+loginButton.onclick = () => window.location.href = "../../views/login.html"

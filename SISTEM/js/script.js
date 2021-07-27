@@ -1,7 +1,17 @@
 import { getOperations } from "./modules/callsApi.js";
-import { listenerViewMore, listenerLogout, listenerNewOperation } from "./modules/listeners.js";
+import { onClickViewMore, onClickLogout, onClickNewOperation, onClickShowOperation } from "./modules/listeners.js";
 
-getOperations()
-listenerViewMore()
-listenerLogout()
-listenerNewOperation()
+const start = async () =>{
+    try{
+       await getOperations()
+       await onClickShowOperation()
+       await onClickViewMore()
+       await onClickLogout()
+       await onClickNewOperation()
+    }catch(err){
+        alert('Error de sicronizacion')
+        window.location.href = "../views/login.html"
+    }
+}
+
+start()

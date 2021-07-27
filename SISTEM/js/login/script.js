@@ -22,4 +22,4 @@ formLogin.addEventListener('submit', (e) => {
         .catch(err => console.log(err))
 })
 
-registerButton.addEventListener('click', () => window.location.href = "../../views/register.html")
+registerButton.onclick = () => window.location.href = "../../views/register.html"

@@ -36,28 +36,29 @@ export const renderOperation = (data) =>{
     let amountHTML = ''
 
     let day = new Date(data.date)
-    main.innerHTML += 
-        `<div class="operation flex-row">
-            <div class="flex-row inner-container-operation">
-                <div class="flex-column text-align-center">
-                    <span class="month-operation">${transformMonth(data.date)}</span>
-                    <span class="day-operation">${day.getDate()}</span>
+    main.innerHTML +=
+        `<div class="operation flex-row" id=${data.id_operation}>
+                <div class="flex-row inner-container-operation">
+                    <div class="flex-column text-align-center">
+                        <span class="month-operation">${transformMonth(data.date)}</span>
+                        <span class="day-operation">${day.getDate()}</span>
+                    </div>
+                    
+                    <span class="concept">
+                        ${data.concept}
+                    </span>
                 </div>
-                
-                <span class="concept">
-                    ${data.concept}
+
+                <span class="amount-operation operationId${data.id_operation}">
+                    $${data.amount}
                 </span>
             </div>
+        `
 
-            <span class="amount-operation operationId${data.id_operation}">
-                $${data.amount}
-            </span>
-        </div>`
-
-        amountHTML = document.querySelector(`.operationId${data.id_operation}`)
-        if(data.type_operation == 'ingreso')
-            amountHTML.classList.add('entry-color')
-        else
-            amountHTML.classList.add('egress-color')
+    amountHTML = document.querySelector(`.operationId${data.id_operation}`)
+    if(data.type_operation == 'ingreso')
+        amountHTML.classList.add('entry-color')
+    else
+        amountHTML.classList.add('egress-color')
 
 }
