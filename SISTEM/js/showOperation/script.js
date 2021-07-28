@@ -2,13 +2,6 @@ const token = localStorage.getItem('token')
 const userId = localStorage.getItem('idUser')
 const operationId = localStorage.getItem('id_operation')
 
-document.querySelector('.logout-img').onclick = () => {
-    localStorage.removeItem('token')
-    localStorage.removeItem('idUser')
-
-    window.location.href = "../../views/login.html"
-}
-
 axios({
     method: "GET",
     url: `http://localhost:8000/show/${userId}&${operationId}`,
@@ -48,4 +41,25 @@ edit.onclick = () => {
 const returnButton = document.querySelector('.return-button')
 returnButton.onclick = () => {
     window.location.href = "../../index.html"
+}
+
+const deleteImg = document.querySelector('.delete-img')
+deleteImg.onclick = async () => {
+    axios({
+        method: "DELETE",
+        url: `http://localhost:8000/delete`,
+        data: { id_operation: operationId, },
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        }
+    })
+    .then((response) => {
+        alert(response.data.message)
+        window.location.href = "../../index.html"    
+    })
+    .catch(() => {
+        alert('Error intentelo nuevamente mas tarde')
+        window.location.href = "../../index.html"
+    })
 }

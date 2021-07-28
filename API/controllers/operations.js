@@ -7,7 +7,7 @@ module.exports.operations = (req, res)=>{
             return res.status(400).json({message: 'Error en la consulta.'})
         
         if(results.length == 0){
-            res.status(204).json({message: 'Usuario no encontrado.'})
+            res.json({message: 'Sin operaciones registradas.'})
         }else{
             res.status(200).json({data: results})
         }
