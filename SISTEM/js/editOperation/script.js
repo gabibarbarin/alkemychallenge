@@ -35,7 +35,7 @@ formNewOperation.addEventListener('submit', (e) => {
         method: "PUT",
         url: `http://localhost:8000/edit`,
         data: {
-            "id_operation": "10",
+            "id_operation": `${operationId}`,
             "concept": document.querySelector('#concept').value,
             "amount": document.querySelector('#amount').value,
             "date": document.querySelector('#date').value

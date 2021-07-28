@@ -15,9 +15,20 @@ formLogin.addEventListener('submit', (e) => {
             "Content-Type": "application/json",
         }})
         .then(response => {
-            localStorage.setItem("token", response.data.token)
-            localStorage.setItem("idUser", response.data.payload.user_id)
-            window.location.href = "/index.html"
+            if(response.data.message != undefined && response.data.message.errors){
+                let i = 0
+                console.log(response.data.message.errors[i])
+                while(response.data.message.errors[i]){
+                    alert(response.data.message.errors[i].msg)
+                    i++
+                }
+            }else if(response.data.message)
+                alert(response.data.message)
+            else{
+                localStorage.setItem("token", response.data.token)
+                localStorage.setItem("idUser", response.data.payload.user_id)
+                window.location.href = "/index.html"
+            }
         })
         .catch(err => console.log(err))
 })

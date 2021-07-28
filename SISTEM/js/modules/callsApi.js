@@ -36,9 +36,26 @@ export const getAllOperations = () =>{
         }})
         .then(response => {
             let i = 10 
-            
+
             while(response.data.data[i]){
                 renderOperation(response.data.data[i])
+                i++
+            }
+
+            let showOperation = document.querySelectorAll('.operation')
+
+            i = 0
+            while(showOperation[i]){
+
+                showOperation[i].onclick = (event) => {
+                    event.path.forEach(element => {
+                        if(element.id != '' && element.id != 'main' && element.id != undefined && element.id != null){
+                            localStorage.setItem('id_operation', element.id)
+                        }
+                    })
+                    window.location.href = '../../views/showOperation.html'
+                }
+        
                 i++
             }
         })
