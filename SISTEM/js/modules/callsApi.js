@@ -49,7 +49,7 @@ export const getAllOperations = () =>{
 
                 showOperation[i].onclick = (event) => {
                     event.path.forEach(element => {
-                        if(element.id != '' && element.id != 'main' && element.id != undefined && element.id != null){
+                        if(element.id != '' && element.id != 'main-home' && element.id != undefined && element.id != null){
                             localStorage.setItem('id_operation', element.id)
                         }
                     })

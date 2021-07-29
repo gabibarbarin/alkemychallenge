@@ -1,5 +1,5 @@
 import { getOperations } from "./modules/callsApi.js";
-import { onClickViewMore, onClickLogout, onClickNewOperation, onClickShowOperation } from "./modules/listeners.js";
+import { onClickViewMore, onClickLogout, onClickNewOperation, onClickShowOperation, listenerMain } from "./modules/listeners.js";
 
 const start = async () =>{
     try{
@@ -8,6 +8,7 @@ const start = async () =>{
        await onClickViewMore()
        await onClickLogout()
        await onClickNewOperation()
+       await listenerMain()
     }catch(err){
         alert('Error de sicronizacion')
         window.location.href = "../views/login.html"

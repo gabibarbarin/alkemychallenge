@@ -1,3 +1,7 @@
+.body-home{
+    min-height: 100vh;
+    overflow: scroll;
+}
 .balance-general{
     height: 4.5rem;
     padding: 1rem 0;
@@ -15,9 +19,9 @@
     font-size: 1rem;
 }
 
-#main{
+#main-home{
     background-color: white;
-    padding-bottom: 1rem;
+    padding-bottom: 1.2rem;
 }
 a{
     background-color: transparent;
@@ -64,14 +68,32 @@ a{
 
 .keypad{
     align-items: center;
+    margin-top: .5rem;
 }
 
 .keypad img{
     height: 3rem;
+    margin-bottom: .3rem;
+}
+
+.delete-img-show{
+    position: absolute;
+    right: .8rem;
+    display: none;
+}
+
+.footer-home{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.position-absolute{
+    position: absolute;
+    bottom: 0;
 }
 
 @media only screen and (min-width: 425px) {
-    #main{
+    #main-home{
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -80,5 +102,11 @@ a{
 @media only screen and (min-width: 768px) {
     .inner-container-operation{
         max-width: 95%;
+    }
+    .delete-img-show{
+        display: initial;
+    }
+    #main-home .primary-button{
+        width: 15rem;
     }
 }

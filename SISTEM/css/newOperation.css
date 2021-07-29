@@ -21,6 +21,7 @@
     padding: 1rem .5rem;
     background-color: white;
     height: 75%;
+    box-sizing: border-box;
 }
 
 .titles-input{
@@ -42,4 +43,10 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    .form-operation .primary-button{
+        margin-bottom: .3rem;
+    }
 }

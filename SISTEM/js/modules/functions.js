@@ -52,6 +52,7 @@ export const renderOperation = (data) =>{
                 <span class="amount-operation operationId${data.id_operation}">
                     $${data.amount}
                 </span>
+                <img class='delete-img-show' src="../img/delete.svg">
             </div>
         `
 

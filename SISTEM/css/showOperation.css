@@ -38,7 +38,7 @@
     overflow-wrap: break-word;
 }
 
-#date, #concept-show-operation{
+.show-operation-container #date, #concept-show-operation{
     box-sizing: border-box;
     padding: 0 1.3rem 1.5rem 1.3rem;
 }
@@ -60,4 +60,10 @@
     top: 0;
     right: 0;
     width: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+    .show-operation-container #date, #concept-show-operation{
+        padding-bottom: .9rem;
+    }
 }

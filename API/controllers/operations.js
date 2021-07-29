@@ -50,7 +50,7 @@ module.exports.delete = (req, res)=>{
         if(err) 
             return res.status(400).json({message: 'Error en la consulta.'})
 
-        res.status(200).json({message: 'Operación eliminada correctamente.'})
+        res.json({message: 'Operación eliminada correctamente.'})
     })
 }
 

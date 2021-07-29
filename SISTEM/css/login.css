@@ -31,3 +31,15 @@
 .form-login button{
     margin-top: .5rem;
 }
+
+@media only screen and (min-width: 768px) {
+    .login-container{
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .login-container{
+        margin-top: 5%;
+    }
+}
