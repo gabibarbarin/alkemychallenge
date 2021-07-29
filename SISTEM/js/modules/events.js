@@ -108,5 +108,4 @@ export const listenerMain = () =>{
     const footer = document.querySelector('.footer-home')
     if(main.clientHeight <= 400)
         footer.classList.add('position-absolute')
-
 }

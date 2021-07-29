@@ -1,5 +1,5 @@
 import { getOperations } from "./modules/callsApi.js";
-import { onClickViewMore, onClickLogout, onClickNewOperation, onClickShowOperation, listenerMain } from "./modules/listeners.js";
+import { onClickViewMore, onClickLogout, onClickNewOperation, onClickShowOperation, listenerMain } from "./modules/events.js";
 
 const start = async () =>{
     try{

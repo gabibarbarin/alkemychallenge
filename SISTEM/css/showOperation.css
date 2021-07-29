@@ -1,10 +1,11 @@
 .show-operation-container{
     padding: 1.5rem .5rem;
     justify-content: space-between;
-    max-height: 70vh;
-    overflow-y: scroll;
+    max-height: 80vh;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .inner-header{
@@ -18,7 +19,7 @@
 #amount-show-operation{
     font-size: 2rem;
     font-weight: 500;
-    color: white;
+    color: white;   
 }
 
 .show-operation-container span{
@@ -44,8 +45,8 @@
 }
 
 .keypad-show-operation{
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    text-align: center;
 }
 
 .edit-img{
@@ -61,7 +62,11 @@
     right: 0;
     width: 2rem;
 }
-
+@media only screen and (min-width: 425px) {
+    .show-operation-container #date{
+        margin-bottom: 0rem;
+    }
+}
 @media only screen and (min-width: 1024px) {
     .show-operation-container #date, #concept-show-operation{
         padding-bottom: .9rem;
