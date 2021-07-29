@@ -106,8 +106,7 @@ export const onClickDeleteOperation = () =>{
 export const listenerMain = () =>{
     const main = document.querySelector('#main-home')
     const footer = document.querySelector('.footer-home')
-    if(main.clientHeight <= 400){
+    if(main.clientHeight <= 400)
         footer.classList.add('position-absolute')
-        console.log(main.clientHeight)
-    }
+
 }

@@ -1,4 +1,4 @@
-import { renderBalance, renderOperation } from "./functions.js"
+import { renderBalance, renderEmptyOperations, renderOperation } from "./functions.js"
 const token = localStorage.getItem('token')
 const userId = localStorage.getItem('idUser')
 
@@ -11,12 +11,18 @@ return axios({
         Authorization: `Bearer ${token}`,
     }})
     .then(response => {
-        renderBalance(response.data.data)
-        let i = 0 
+        
+        if(!response.data.message){
+            renderBalance(response.data.data)
+            let i = 0 
 
-        while(response.data.data[i] && i<10){
-            renderOperation(response.data.data[i])
-            i++
+            while(response.data.data[i] && i<10){
+                renderOperation(response.data.data[i])
+                i++
+            }
+        }else{
+            renderBalance(0)
+            renderEmptyOperations(response.data.message)
         }
     })
     .catch(err => {

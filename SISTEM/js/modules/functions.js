@@ -32,11 +32,11 @@ export const renderBalance = (data) =>{
 
 export const renderOperation = (data) =>{
     
-    const main = document.querySelector('.operations-container')
+    const operationsContainer = document.querySelector('.operations-container')
     let amountHTML = ''
 
     let day = new Date(data.date)
-    main.innerHTML +=
+    operationsContainer.innerHTML +=
         `<div class="operation flex-row" id=${data.id_operation}>
                 <div class="flex-row inner-container-operation">
                     <div class="flex-column text-align-center">
@@ -62,4 +62,10 @@ export const renderOperation = (data) =>{
     else
         amountHTML.classList.add('egress-color')
 
+}
+
+export const renderEmptyOperations = (message) => {
+    const operationsContainer = document.querySelector('.operations-container')
+    operationsContainer.innerHTML = `<div id='message'>${message}</div>`
+    document.querySelector('#message').style.textAlign = 'center';
 }
