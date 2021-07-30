@@ -1,0 +1,23 @@
+¡Hola! Soy Gabriel Barbarin Gorostegui, el Dev detras de esta API y sistema, de antemano te pido disculpas
+por lo que estas por ver ¡Jaja!
+
+La API está configurada para ser usada en un hambiente local, en caso de no ser asi usted deberá editar el
+archivo .env con los datos correspondientes. Para su facilidad alli puse todos los datos necesarios.
+
+PORT = 8000 (Puerto)
+
+DB_HOST= "localhost" (Host de la DB)
+
+DB_PORT= 3306 (Puerto de la DB)
+
+DB_USER= "root" (Usuario de la DB)
+
+DB_PASS= "" (Clave de la DB)
+
+DB= budget (La misma se administro en una carpeta solo debera importarla, en caso de usar otra cambie este 
+            valor por el nombre de la nueba DB)
+
+JWT_KEY = 732F$8879n<6JuT<j (Clave para el JsonWebToken, por seguridad y comodidad me gusta guardarla aca)
+
+En caso de necesitar cualquier cosa o tener una duda por favor no dude en comunicarse conmigo:
+gabi.barbarin@hotmail.com

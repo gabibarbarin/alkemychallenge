@@ -1,0 +1,14 @@
+¡Hola! Adjunto por acá una base de datos de prueba con dos usuarios:
+
+UsuarioLleno con id_user = 2. El mismo tiene:
+    -Ingresos de prueba.
+    -Egresos de prueba.
+    -Ingreso de prueba con un concepto largo.
+
+UsuarioVacio con id_user = 3. El mismo tiene:
+    -Ningun ingreso y egreso cargado para probar que nada explote si eso sucede.
+
+¡Estas en completa libertad de probar lo que quieras!
+
+Ante cualquier duda por favor consultame por este medio:
+gabi.barbarin@hotmail.com
